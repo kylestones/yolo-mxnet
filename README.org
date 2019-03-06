@@ -1,9 +1,27 @@
 ** 功能
 
-使用 gluon 实现了 YOLOv3 的前向传播
+yolov3-self 使用 gluon 实现了 YOLOv3 的 inference
+
+
+** 依赖
+
+1. numpy
+1. mxnet
+1. gluoncv （需要使用 gluoncv 已经训练好的模型权重、以及画图函数)
+
+
+** 步骤
+
+1. 安装相应的依赖
+1. 下载 yolov3-self.ipynb 文件
+1. 本地使用 jupyter notebook 打开该文件
+1. 找打一张待检测的图片，将其路径赋值给 cell9 中的变量 imgname
+1. 逐个 cell 依次执行即可得到检测结果（初次运行会自动下载模型参数）
+
 
 ** 说明
 
 1. 整个实现为了理解方便，几乎没有入参检测、错误处理、扩展性
 1. 使用 Darknet53 主网络提取特征
 1. 输入的图片会被固定 resize 成 416*416 ，没有保持横纵比
+1. 全部函数都在 yolov3-self.ipynb 文件中，其他文件只是为了以后写 training 代码做的备份
